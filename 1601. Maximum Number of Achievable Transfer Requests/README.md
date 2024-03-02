@@ -7,7 +7,7 @@ we can decide whether to use it or not, <br>
 then explore all possibilities <br>
 and find the maximum result.
 
-The time complexity of this solution is O(2^m*n), Big O of 2 to the power of m times n, <br>
+The time complexity of this solution is O((2^m)*n), Big O of 2 to the power of m times n, <br>
 where m is the length of the requests,<br>
 and n is the input number n.<br>
 
