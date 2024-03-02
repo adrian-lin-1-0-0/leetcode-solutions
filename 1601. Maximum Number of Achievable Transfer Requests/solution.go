@@ -2,14 +2,14 @@ package solution
 
 func maximumRequests(n int, requests [][]int) int {
     ans :=0
-    builds := make([]int,n)
+    buildings := make([]int,n)
     k := len(requests)
 
     var dfs func(int,int)
     dfs = func(idx,cnt int){
         if idx == k{
             for i:=0;i<n;i++{
-                if builds[i]!=0{
+                if buildings[i]!=0{
                     return
                 }
             }
@@ -18,13 +18,13 @@ func maximumRequests(n int, requests [][]int) int {
             return
         }
 
-        builds[requests[idx][0]] --
-        builds[requests[idx][1]] ++
+        buildings[requests[idx][0]] --
+        buildings[requests[idx][1]] ++
 
         dfs(idx+1,cnt+1) 
 
-        builds[requests[idx][0]]++
-        builds[requests[idx][1]]--
+        buildings[requests[idx][0]]++
+        buildings[requests[idx][1]]--
 
         dfs(idx+1,cnt)
     }
