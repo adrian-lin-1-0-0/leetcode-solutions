@@ -27,8 +27,6 @@ func minimumDistance(points [][]int) int {
 	ans := math.MaxInt32
 	l, r := 0, n-1
 
-	// fmt.Println(c1)
-	// fmt.Println(c2)
 
 	for i := 0; i < n; i++ {
 

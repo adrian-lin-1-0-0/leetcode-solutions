@@ -15,7 +15,7 @@ Return the minimum possible value for maximum distance between any two points by
 
 求移除該點後的最大曼哈頓距離
 
-解法1:
+### 解法1:
 
 週賽當下是用比較直覺的方法,對於每個點,我們都拿掉該點,然後計算剩下的點之間的最大曼哈頓距離
 
@@ -23,6 +23,7 @@ Return the minimum possible value for maximum distance between any two points by
 
 所以我們可以先推倒如何計算最大曼哈頓距離
 
+```
 |Xi – Xj| + |Yi – Yj| 
 
 = max(
@@ -32,10 +33,19 @@ Return the minimum possible value for maximum distance between any two points by
      Xi - Xj + Yi - Yj
 )
 
-= max(
-    ( Xi - Yi) - ( Xj - Yj),
-    (-Xi + Yi) - (-Xj + Yj),
-    (-Xi - Yi) - (-Xj - Yj),
-    ( Xi + Yi) - ( Xj + Yj)
+max(
+    |(Xi + Yi) - (Xj + Yj)|,
+    |(Xi + Yi) - (Xj - Yj)|
 )
 
+```
+所以我們可以先計算出所有點的(Xi + Yi)和(Xi - Yi)的值,
+然後排序,之後就可以用 O(1) 的時間計算出最大曼哈頓距離
+
+
+排序: O(nlogn)
+
+
+### 解法2:
+
+O(n)的解法
