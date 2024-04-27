@@ -2,7 +2,10 @@
 
 Using Dijkstra's algorithm to find the shortest paths from node 0 to all other nodes.
 
-Starting from the destination and moving towards the source, if there exists an edge whose weight is equal to the difference in shortest path distances between the two nodes, then this edge lies on the shortest path.
+Starting from the node-`n-1` and moving towards the node-`0`,
+if there exists an edge whose weight is equal to 
+the difference in shortest path distances between the two nodes,
+then this edge lies on the shortest path.
 
 For example:
 ```
